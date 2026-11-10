@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8fa" />
+    <meta name="description" content="A tiny, accessible demo of Light, Dark, and System theme switching." />
+    <title>Theme switcher · small demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="theme.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Tone home"><span class="logo">t</span> tone</a>
+      <span class="top-note"><span class="live-dot"></span> A tiny theme demo</span>
+    </header>
+    <main class="page">
+      <section class="intro">
+        <p class="eyebrow">A little more you</p>
+        <h1>Your space,<br /><span>your light.</span></h1>
+        <p class="lede">A calmer corner of the internet. Pick a look that feels right, or let your device decide.</p>
+      </section>
+      <section class="settings-card" aria-labelledby="appearance-title">
+        <div class="card-heading">
+          <div class="heading-icon" aria-hidden="true">◐</div>
+          <div><h2 id="appearance-title">Appearance</h2><p>Choose how Tone looks on this device.</p></div>
+        </div>
+        <fieldset class="theme-options">
+          <legend class="sr-only">Choose a color theme</legend>
+          <label class="theme-option" data-choice="light">
+            <input type="radio" name="theme" value="light" checked />
+            <span class="preview preview-light" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="option-label"><span>Light</span><small>Bright &amp; clear</small></span><span class="check" aria-hidden="true">✓</span>
+          </label>
+          <label class="theme-option" data-choice="dark">
+            <input type="radio" name="theme" value="dark" />
+            <span class="preview preview-dark" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="option-label"><span>Dark</span><small>Easy on the eyes</small></span><span class="check" aria-hidden="true">✓</span>
+          </label>
+          <label class="theme-option" data-choice="system">
+            <input type="radio" name="theme" value="system" />
+            <span class="preview preview-system" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="option-label"><span>System</span><small>Follow your device</small></span><span class="check" aria-hidden="true">✓</span>
+          </label>
+        </fieldset>
+        <div class="card-foot"><span class="sparkle">✳</span><span id="theme-status" aria-live="polite">Looking bright and lovely.</span></div>
+      </section>
+      <footer>Made for every kind of day <span>✳</span></footer>
+    </main>
+    <span class="sun-orb" aria-hidden="true"></span>
+  </body>
+</html>
